@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height: 100%;
+}
+img{
+    display: block;
+}
+.flex{
+    display: flex;
+}
+.cocenter{
+    align-items: center;
+}
+.maincenter{
+    justify-content: center;
+}
+.contentcenter{
+    justify-content: center;
+    align-items: center;
+}
+.around{
+    justify-content: space-around;
+}
+.culumn{
+    flex-direction: column;
+}
+.logo{
+    width: 1.636rem;
+    height: .516rem;
+    position: fixed;
+    z-index: 999;
+    left: .2rem;
+    top: .2rem;
+}
