@@ -18,23 +18,93 @@
         height: 100%;
         left: 0;
         top: 0;
-        background:url("./img/game/background.png") center center no-repeat;
+        background:url("./img/starintroduce/background.png") center center no-repeat;
         background-size: 100% 100%;
     }
     .gameimg{
         position: absolute;
         top:-1rem;
     }
+    .zhubiao{
+        width: 7.5rem;
+        height: 6.06rem;
+        position: absolute;
+        left: 50%;
+        top: 20.46%;
+        transform: translateX(-50%);
+    }
+    .btnlist{
+        position: absolute;
+        left: 0;
+        top: 73.46%;
+        width: 100%;
+        padding: 0 .6rem;
+        box-sizing: border-box;
+    }
+    .btnlist img{
+        width: 1.57rem;
+        height: .6rem;
+    }
+    .startbtn{
+        position: absolute;
+        left: 50%;
+        top: 85.83%;
+        width: 1.28rem;
+        height: .23rem;
+        transform: translateX(-50%);
+        z-index: 2;
+    }
+    .xingqiu{
+        width: 11.62rem;
+        height: 14.67rem;
+        position: absolute;
+        z-index: 1;
+        left: -27.46%;
+        top:-0.499%;
+        transform-origin: center center;
+        /*transform: translate(-50%,-50%);*/
+        -webkit-animation:starrotate 32s linear infinite;
+        -moz-animation:starrotate 32s linear infinite;
+        -o-animation:starrotate 32s linear infinite;
+        animation:starrotate 32s linear infinite;
+    }
+    .zi{
+        width: 5.33rem;
+        height: 1.55rem;
+        position: absolute;
+        z-index: 2;
+        top: 39.36%;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-animation:wordshow 3s linear;
+        -moz-animation:wordshow 3s linear;
+        -o-animation:wordshow 3s linear;
+        animation:wordshow 3s linear;
+    }
+    @keyframes starrotate
+    {
+        0%   {transform:rotateZ(0deg)}
+        /*50% {transform:rotateZ(180deg)}*/
+        100% {transform:rotateZ(360deg)}
+    }
+    @keyframes wordshow
+    {
+        0%   {opacity:0}
+        /*50% {transform:rotateZ(180deg)}*/
+        100% {opacity:1}
+    }
 </style>
 <body>
 <div class="content">
-
+    <img src="./img/logo.png" alt="" class="logo">
+    <img src="./img/starintroduce/zi.png" alt="" class="zi">
+    <img src="./img/starintroduce/xingqiu.png" alt="" class="xingqiu">
+    <div class="startbtn"><img src="./img/starintroduce/xiayiye.png" alt="" style="width: 100%;height: 100%"></div>
 </div>
 </body>
 </html>
 <script src="./js/jquery.min.js"></script>
 <script src="js/interfaceUrl.js"></script>
-<script src="js/Gameinit.js?v2303"></script>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
 <script>
     /*$.ajax({
@@ -86,10 +156,9 @@
 
     //阻止微信浏览器滑动
     window.addEventListener('touchmove', e => e.preventDefault(), { passive: false })
-    $(".content").on('touchstart','.gameimg',function () {
-        $(this).remove()
-    })
     window.onload = function () {
-        new Gameinit();
+        $('.startbtn').on('touchstart',function () {
+            location.replace('./gamebefore.html')
+        })
     }
 </script>

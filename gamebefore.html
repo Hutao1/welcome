@@ -18,23 +18,48 @@
         height: 100%;
         left: 0;
         top: 0;
-        background:url("./img/game/background.png") center center no-repeat;
+        background:url("./img/starintroduce/background.png") center center no-repeat;
         background-size: 100% 100%;
     }
-    .gameimg{
+    .startbtn{
         position: absolute;
-        top:-1rem;
+        left: 50%;
+        top: 85.83%;
+        width: 2.13rem;
+        height: .24rem;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+    .word{
+        width: 4.38rem;
+        height: 1.54rem;
+        position: absolute;
+        z-index: 1;
+        top: 31.48%;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-animation:wordshow 3s linear;
+        -moz-animation:wordshow 3s linear;
+        -o-animation:wordshow 3s linear;
+        animation:wordshow 3s linear;
+    }
+    @keyframes wordshow
+    {
+        0%   {opacity:0}
+        /*50% {transform:rotateZ(180deg)}*/
+        100% {opacity:1}
     }
 </style>
 <body>
 <div class="content">
-
+    <img src="./img/logo.png" alt="" class="logo">
+    <img src="./img/gamebefore/word.png" alt="" class="word">
+    <div class="startbtn"><img src="./img/gamebefore/joingame.png" alt="" style="width: 100%;height: 100%"></div>
 </div>
 </body>
 </html>
 <script src="./js/jquery.min.js"></script>
 <script src="js/interfaceUrl.js"></script>
-<script src="js/Gameinit.js?v2303"></script>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
 <script>
     /*$.ajax({
@@ -86,10 +111,9 @@
 
     //阻止微信浏览器滑动
     window.addEventListener('touchmove', e => e.preventDefault(), { passive: false })
-    $(".content").on('touchstart','.gameimg',function () {
-        $(this).remove()
-    })
     window.onload = function () {
-        new Gameinit();
+        $('.startbtn').on('touchstart',function () {
+            location.replace('./game.html')
+        })
     }
 </script>

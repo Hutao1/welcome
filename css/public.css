@@ -24,15 +24,17 @@ img{
 .around{
     justify-content: space-around;
 }
+.between{
+    justify-content: space-between;
+}
 .culumn{
     flex-direction: column;
 }
-/*
 .logo{
-    width: 1.636rem;
-    height: .516rem;
+    width: 1.82rem;
+    height: .46rem;
     position: fixed;
     z-index: 999;
-    left: .2rem;
-    top: .2rem;
-}*/
+    left: .55rem;
+    top: .55rem;
+}

@@ -42,14 +42,20 @@ class Gameinit {
         // createnergy.css({'width':'1rem','height':'1rem','left':getRandom(0,document.body.clientWidth-createnergy.width)});
         createnergy.addClass('gameimg');
         $('.content').append(createnergy)
-        createnergy.css({'width':'1rem','height':'1rem'});
+        createnergy.css({'width':'1rem','height':'1rem','transform':'rotate('+getRandom(0,360)+'deg)'});
         createnergy.css({'left':getRandom(0,document.body.clientWidth-createnergy[0].width),'top':-createnergy[0].height});
+        // createnergy.css('transform','rotate('+getRandom(0,360)+'deg)')
+        createnergy.css({'transition':'all 5s linear'});
         /*createnergy.animate({top:document.body.clientHeight+100+'px'},2000,'linear',function () {
             $(this).remove()
         })*/
-        this.sportmove(createnergy[0],{top:document.body.clientHeight+100},3000,function () {
+        createnergy.css({'top':document.body.clientHeight+100});
+        setTimeout(()=>{
+            createnergy.remove()
+        },10000)
+        /*this.sportmove(createnergy[0],{top:document.body.clientHeight+100},3000,function () {
             console.log('结束')
-        })
+        })*/
     }
     createenergy() {
         setTimeout(()=>{
@@ -71,16 +77,18 @@ class Gameinit {
         // var leftdiffer = endleft-startleft;
         // var leftstep = leftdiffer/time*40;
         var topdiffer = endtop-starttop;
-        var topstep = topdiffer/time*40;
+        // var topstep = topdiffer/time*40;
+        var topstep = 2;
         var timer = setInterval(()=>{
             el.style.top =parseFloat(el.style.top)+topstep+'px';
             if(parseInt(el.style.top)>endtop){
                 el.remove();
+                console.log(111)
                 callback();
                 clearInterval(timer)
             }
             // el.style.left +=
-        },30)
+        },15)
     }
 }
 

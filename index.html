@@ -18,23 +18,56 @@
         height: 100%;
         left: 0;
         top: 0;
-        background:url("./img/game/background.png") center center no-repeat;
+        background:url("./img/index/background.png") center center no-repeat;
         background-size: 100% 100%;
     }
     .gameimg{
         position: absolute;
         top:-1rem;
     }
+    .zhubiao{
+        width: 7.5rem;
+        height: 6.06rem;
+        position: absolute;
+        left: 50%;
+        top: 20.46%;
+        transform: translateX(-50%);
+    }
+    .btnlist{
+        position: absolute;
+        left: 0;
+        top: 73.46%;
+        width: 100%;
+        padding: 0 1.7rem;
+        box-sizing: border-box;
+    }
+    .btnlist img{
+        width: 1.57rem;
+        height: .6rem;
+    }
+    .startbtn{
+        position: absolute;
+        left: 50%;
+        top: 85.83%;
+        width: 2.04rem;
+        height: .26rem;
+        transform: translateX(-50%);
+    }
 </style>
 <body>
 <div class="content">
-
+    <img src="./img/logo.png" alt="" class="logo">
+    <img src="./img/index/zhubiao.png" alt="" class="zhubiao">
+    <div class="btnlist flex between">
+        <div class="detail"><img src="./img/index/detail.png" alt=""></div>
+        <div class="ranking"><img src="./img/index/ranking.png" alt=""></div>
+    </div>
+    <div class="startbtn"><img src="./img/index/startbtn.png" alt="" style="width: 100%;height: 100%"></div>
 </div>
 </body>
 </html>
 <script src="./js/jquery.min.js"></script>
 <script src="js/interfaceUrl.js"></script>
-<script src="js/Gameinit.js?v2303"></script>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
 <script>
     /*$.ajax({
@@ -86,10 +119,9 @@
 
     //阻止微信浏览器滑动
     window.addEventListener('touchmove', e => e.preventDefault(), { passive: false })
-    $(".content").on('touchstart','.gameimg',function () {
-        $(this).remove()
-    })
     window.onload = function () {
-        new Gameinit();
+        $('.startbtn').on('touchstart',function () {
+            location.replace('./starintroduce.html');
+        })
     }
 </script>
