@@ -13,49 +13,29 @@
          background-size: 100% 100%;
      }*/
     .content{
+        position: fixed;
         width: 100%;
-        /*height: 100%;*/
-        /*overflow-y: auto;*/
-        position: relative;
+        height: 100%;
+        left: 0;
+        top: 0;
     }
-    .join{
-        width: 2.79rem;
-        height: 1.35rem;
+    .gameimg{
         position: absolute;
-        bottom: 3%;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    .rule{
-        width: 100%;
+        top:-1rem;
     }
 </style>
 <body>
-<img src="./img/logo.png" class="logo" alt="">
-<!--<audio src="./audio/rain.mp3" autoplay></audio>-->
+<div class="content">
+
+</div>
 </body>
 </html>
 <script src="./js/jquery.min.js"></script>
 <script src="js/interfaceUrl.js"></script>
+<script src="js/Gameinit.js"></script>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
 <script>
-    /*var $au = $("<audio></audio>");
-    $au[0].src = './audio/lute.mp3';
-    $au[0].autoplay = 'autoplay';*/
     /*$.ajax({
-        type:'get',
-        url: 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx3b5dd698737525dc&secret=04ee7eb456a3387cf9016fc27de7163b',
-        contentType: "application/x-www-form-urlencoded; charset=utf-8",
-        // contentType: "application/json; charset=utf-8",
-        success:function (res) {
-            alert(JSON.stringify(res))
-        },
-        error:function (res) {
-            console.log(res)
-        }
-    })*/
-    // alert(location.href.split('#')[0])
-    $.ajax({
         type:'post',
         url: USERMESSAGE.insertTicket,
         contentType: "application/json; charset=utf-8",
@@ -100,17 +80,14 @@
                 alert('取消分享')
             }
         })
-    })
-    /*wx.config({
-        debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
-        appId: '', // 必填，公众号的唯一标识
-        timestamp: , // 必填，生成签名的时间戳
-        nonceStr: '', // 必填，生成签名的随机串
-        signature: '',// 必填，签名
-        jsApiList: [] // 必填，需要使用的JS接口列表
-    });*/
+    })*/
 
     //阻止微信浏览器滑动
-    // window.addEventListener('touchmove', e => e.preventDefault(), { passive: false })
-
+    window.addEventListener('touchmove', e => e.preventDefault(), { passive: false })
+    $(".content").on('touchstart','.gameimg',function () {
+        $(this).remove()
+    })
+    window.onload = function () {
+        new Gameinit();
+    }
 </script>
