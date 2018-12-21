@@ -76,10 +76,7 @@
         top: 39.36%;
         left: 50%;
         transform: translateX(-50%);
-        -webkit-animation:wordshow 3s linear;
-        -moz-animation:wordshow 3s linear;
-        -o-animation:wordshow 3s linear;
-        animation:wordshow 3s linear;
+        display: none;
     }
     @keyframes starrotate
     {
@@ -87,17 +84,13 @@
         /*50% {transform:rotateZ(180deg)}*/
         100% {transform:rotateZ(360deg)}
     }
-    @keyframes wordshow
-    {
-        0%   {opacity:0}
-        /*50% {transform:rotateZ(180deg)}*/
-        100% {opacity:1}
-    }
 </style>
 <body>
 <div class="content">
     <img src="./img/logo.png" alt="" class="logo">
-    <img src="./img/starintroduce/zi.png" alt="" class="zi">
+    <img src="./img/starintroduce/word1.png" alt="" class="zi word1">
+    <img src="./img/starintroduce/word2.png" alt="" class="zi word2">
+    <img src="./img/starintroduce/word3.png" alt="" class="zi word3">
     <img src="./img/starintroduce/xingqiu.png" alt="" class="xingqiu">
     <div class="starintroducebtn flex contentcenter"><img src="./img/starintroduce/xiayiye.png" alt="" style="width:1.28rem;height:.23rem"></div>
 </div>
@@ -163,7 +156,13 @@
     //阻止微信浏览器滑动
     window.addEventListener('touchmove', e => e.preventDefault(), { passive: false })
     window.onload = function () {
-
+        $(".word1").fadeIn(1000)
+        setTimeout(()=>{
+            $(".word2").fadeIn(1000)
+        },1000)
+        setTimeout(()=>{
+            $(".word3").fadeIn(1000)
+        },2000)
     }
     $('.starintroducebtn').on('touchstart',function () {
         location.replace('./gamebefore.html')

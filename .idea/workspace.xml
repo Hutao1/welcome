@@ -2,43 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bdc999cf-f55f-46ca-a968-e773fbed5361" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/audio/game.mp3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/audio/gamebefore.mp3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/audio/index.mp3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/audio/logo.mp3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/audio/starivite.mp3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/audio/xingxing.mp3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/audio/yaoshi.mp3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/gameover.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/img/game/gamestart.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/img/game/show1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/img/game/show2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/img/game/show3.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/img/game/start1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/img/game/start2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/img/game/start3.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/img/gameover/gameover.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/img/gameover/yuechi.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/img/index/background1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/img/index/background2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/img/index/lqbz.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/img/index/yaoshi.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/img/invitation/again.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/img/invitation/background1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/img/invitation/background2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/img/invitation/background3.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/img/invitation/qnmb.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/img/starrotate.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/invitation.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/gamebefore/word1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/gamebefore/word2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/gamebefore/word3.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/starintroduce/word1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/starintroduce/word2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/starintroduce/word3.png" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/game.html" afterPath="$PROJECT_DIR$/game.html" />
       <change beforePath="$PROJECT_DIR$/gamebefore.html" afterPath="$PROJECT_DIR$/gamebefore.html" />
-      <change beforePath="$PROJECT_DIR$/img/index/background.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/shareicon.png" afterPath="$PROJECT_DIR$/img/shareicon.png" />
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change beforePath="$PROJECT_DIR$/js/Gameinit.js" afterPath="$PROJECT_DIR$/js/Gameinit.js" />
-      <change beforePath="$PROJECT_DIR$/js/interfaceUrl.js" afterPath="$PROJECT_DIR$/js/interfaceUrl.js" />
-      <change beforePath="$PROJECT_DIR$/js/public.js" afterPath="$PROJECT_DIR$/js/public.js" />
+      <change beforePath="$PROJECT_DIR$/img/gamebefore/word.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img/starintroduce/zi.png" afterPath="" />
       <change beforePath="$PROJECT_DIR$/starintroduce.html" afterPath="$PROJECT_DIR$/starintroduce.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -95,8 +68,8 @@
       <file leaf-file-name="invitation.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/invitation.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="534">
-              <caret line="47" column="32" lean-forward="false" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
+            <state relative-caret-position="391">
+              <caret line="41" column="6" lean-forward="true" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
               <folding>
                 <element signature="n#style#0;n#img#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -113,8 +86,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="932">
-              <caret line="156" column="34" lean-forward="true" selection-start-line="156" selection-start-column="34" selection-end-line="156" selection-end-column="34" />
+            <state relative-caret-position="288">
+              <caret line="116" column="4" lean-forward="true" selection-start-line="116" selection-start-column="4" selection-end-line="123" selection-end-column="5" />
               <folding>
                 <element signature="n#style#0;n#img#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -137,11 +110,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gamebefore.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="gamebefore.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gamebefore.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="51" column="27" lean-forward="false" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
+            <state relative-caret-position="472">
+              <caret line="40" column="22" lean-forward="false" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+              <folding>
+                <element signature="n#style#0;n#img#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="starintroduce.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/starintroduce.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="479">
+              <caret line="149" column="30" lean-forward="true" selection-start-line="149" selection-start-column="30" selection-end-line="149" selection-end-column="30" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -171,8 +162,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>startbtn</find>
       <find>star</find>
+      <find>startbtn</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -186,11 +177,11 @@
         <option value="$PROJECT_DIR$/js/public.js" />
         <option value="$PROJECT_DIR$/js/Gameinit.js" />
         <option value="$PROJECT_DIR$/game.html" />
-        <option value="$PROJECT_DIR$/starintroduce.html" />
         <option value="$PROJECT_DIR$/gameover.html" />
         <option value="$PROJECT_DIR$/js/interfaceUrl.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/invitation.html" />
+        <option value="$PROJECT_DIR$/starintroduce.html" />
         <option value="$PROJECT_DIR$/gamebefore.html" />
       </list>
     </option>
@@ -310,11 +301,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\workplace\welcome\img\gamebefore" />
+      <recent name="E:\workplace\welcome\img\starintroduce" />
       <recent name="E:\workplace\welcome\img\invitation" />
       <recent name="E:\workplace\welcome\img\index" />
       <recent name="E:\workplace\welcome\img" />
-      <recent name="E:\workplace\welcome\audio" />
-      <recent name="E:\workplace\welcome\img\gameover" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -345,12 +336,12 @@
       <workItem from="1545230832398" duration="139000" />
       <workItem from="1545231118073" duration="3033000" />
       <workItem from="1545271962020" duration="10554000" />
-      <workItem from="1545316574489" duration="56858000" />
+      <workItem from="1545316574489" duration="58132000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70584000" />
+    <option name="totallyTimeSpent" value="71858000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -623,8 +614,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/invitation.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="47" column="32" lean-forward="false" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
+        <state relative-caret-position="391">
+          <caret line="41" column="6" lean-forward="true" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#img#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -639,8 +630,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="932">
-          <caret line="156" column="34" lean-forward="true" selection-start-line="156" selection-start-column="34" selection-end-line="156" selection-end-column="34" />
+        <state relative-caret-position="288">
+          <caret line="116" column="4" lean-forward="true" selection-start-line="116" selection-start-column="4" selection-end-line="123" selection-end-column="5" />
           <folding>
             <element signature="n#style#0;n#img#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -662,20 +653,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/starintroduce.html">
+    <entry file="file://$PROJECT_DIR$/img/starintroduce/zi.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gamebefore.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="70" column="8" lean-forward="true" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="8" />
+        <state relative-caret-position="472">
+          <caret line="40" column="22" lean-forward="false" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
           <folding>
+            <element signature="n#style#0;n#img#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gamebefore.html">
+    <entry file="file://$PROJECT_DIR$/starintroduce.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="51" column="27" lean-forward="false" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
+        <state relative-caret-position="479">
+          <caret line="149" column="30" lean-forward="true" selection-start-line="149" selection-start-column="30" selection-end-line="149" selection-end-column="30" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>

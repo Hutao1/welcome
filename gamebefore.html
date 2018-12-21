@@ -38,24 +38,15 @@
         top: 31.48%;
         left: 50%;
         transform: translateX(-50%);
-        -webkit-animation:wordshow 3s linear;
-        -moz-animation:wordshow 3s linear;
-        -o-animation:wordshow 3s linear;
-        animation:wordshow 3s linear;
+        display: none;
     }
-    .lqbz{
+    .starrotate{
         position: absolute;
-        z-index: 0;
+        z-index: 2;
         -webkit-animation:staragain 20s linear infinite;
         -moz-animation:staragain 20s linear infinite;
         -o-animation:staragain 20s linear infinite;
         animation:staragain 20s linear infinite;
-    }
-    @keyframes wordshow
-    {
-        0%   {opacity:0}
-        /*50% {transform:rotateZ(180deg)}*/
-        100% {opacity:1}
     }
     @keyframes staragain
     {
@@ -67,7 +58,16 @@
 <body>
 <div class="content">
     <img src="./img/logo.png" alt="" class="logo">
-    <img src="./img/gamebefore/word.png" alt="" class="word">
+    <img src="./img/starrotate.gif" alt="" class="starrotate" style="left: 79.47%;top: .4rem;width: .36rem;height: .36rem">
+    <img src="./img/starrotate.gif" alt="" class="starrotate" style="left: 45.2%;top: 13.27%;width: .74rem;height: .74rem">
+    <img src="./img/starrotate.gif" alt="" class="starrotate" style="left: 75.87%;top: 19.27%;width: .6rem;height: .6rem">
+    <img src="./img/starrotate.gif" alt="" class="starrotate" style="left: 46.8%;top: 24.06%;width: .4rem;height: .4rem">
+    <img src="./img/starrotate.gif" alt="" class="starrotate" style="left: 73.07%;top: 26.69%;width: .36rem;height: .36rem">
+    <img src="./img/starrotate.gif" alt="" class="starrotate" style="left: 35.2%;top: 36.21%;width: .5rem;height: .5rem">
+
+    <img src="./img/gamebefore/word1.png" alt="" class="word word1">
+    <img src="./img/gamebefore/word2.png" alt="" class="word word2">
+    <img src="./img/gamebefore/word3.png" alt="" class="word word3">
     <div class="gamebefore flex contentcenter"><img src="./img/gamebefore/joingame.png" alt="" style="width:2.13rem;height:0.24rem"></div>
 </div>
 </body>
@@ -132,7 +132,13 @@
     //阻止微信浏览器滑动
     window.addEventListener('touchmove', e => e.preventDefault(), { passive: false })
     window.onload = function () {
-
+        $(".word1").fadeIn(1000)
+        setTimeout(()=>{
+            $(".word2").fadeIn(1000)
+        },1000)
+        setTimeout(()=>{
+            $(".word3").fadeIn(1000)
+        },2000)
     }
     $('.gamebefore').on('touchstart',function () {
         location.replace('./game.html')
