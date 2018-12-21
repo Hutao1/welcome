@@ -15,7 +15,6 @@ class Gameinit {
         var _this = this;
         for(let i = 0; i < urlload.length;i++){
             var img = new Image();
-            console.log(i)
             img.onload = function () {
                 loadingnum++;
                 imgjson[urlload[i]] = this;
@@ -42,17 +41,18 @@ class Gameinit {
         // createnergy.css({'width':'1rem','height':'1rem','left':getRandom(0,document.body.clientWidth-createnergy.width)});
         createnergy.addClass('gameimg');
         $('.content').append(createnergy)
-        createnergy.css({'width':'1rem','height':'1rem','transform':'rotate('+getRandom(0,360)+'deg)'});
-        createnergy.css({'left':getRandom(0,document.body.clientWidth-createnergy[0].width),'top':-createnergy[0].height});
-        // createnergy.css('transform','rotate('+getRandom(0,360)+'deg)')
-        createnergy.css({'transition':'all 5s linear'});
+        // createnergy.css({'width':'1rem','height':'1rem','transform':'rotate('+getRandom(0,360)+'deg)'});
+        createnergy.css({'width':'1rem','height':'1rem'});
+        createnergy.css({'left':getRandom(60,document.body.clientWidth-createnergy[0].width-60),'top':-createnergy[0].height});
+        createnergy.css('transform','rotate('+getRandom(-360,360)+'deg)')
+        createnergy.css({'transition':'all 2s linear'});
         /*createnergy.animate({top:document.body.clientHeight+100+'px'},2000,'linear',function () {
             $(this).remove()
         })*/
         createnergy.css({'top':document.body.clientHeight+100});
         setTimeout(()=>{
             createnergy.remove()
-        },10000)
+        },5000)
         /*this.sportmove(createnergy[0],{top:document.body.clientHeight+100},3000,function () {
             console.log('结束')
         })*/
@@ -61,7 +61,7 @@ class Gameinit {
         setTimeout(()=>{
             this.setenergy()
             this.createenergy()
-        },getRandom(500,1000))
+        },getRandom(200,500))
     }
 
     //获得能量

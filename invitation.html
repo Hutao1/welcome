@@ -18,46 +18,21 @@
         height: 100%;
         left: 0;
         top: 0;
-        background:url("./img/gamebefore/background.png") center center no-repeat;
+        background:url("./img/invitation/background1.png") center center no-repeat;
         background-size: 100% 100%;
     }
-    .gamebefore{
+    .back2{
         position: absolute;
-        left: 50%;
-        top: 85.83%;
-        width: 3.13rem;
-        height: 1.24rem;
-        transform: translateX(-50%);
-        z-index: 99;
     }
-    .word{
-        width: 4.38rem;
-        height: 1.54rem;
-        position: absolute;
-        z-index: 99;
-        top: 31.48%;
-        left: 50%;
-        transform: translateX(-50%);
-        -webkit-animation:wordshow 3s linear;
-        -moz-animation:wordshow 3s linear;
-        -o-animation:wordshow 3s linear;
-        animation:wordshow 3s linear;
-    }
-    .lqbz{
+    .qnmb{
         position: absolute;
         z-index: 0;
-        -webkit-animation:staragain 20s linear infinite;
-        -moz-animation:staragain 20s linear infinite;
-        -o-animation:staragain 20s linear infinite;
-        animation:staragain 20s linear infinite;
+        -webkit-animation:nmsl 20s linear infinite;
+        -moz-animation:nmsl 20s linear infinite;
+        -o-animation:nmsl 20s linear infinite;
+        animation:nmsl 20s linear infinite;
     }
-    @keyframes wordshow
-    {
-        0%   {opacity:0}
-        /*50% {transform:rotateZ(180deg)}*/
-        100% {opacity:1}
-    }
-    @keyframes staragain
+    @keyframes nmsl
     {
         0%   {transform:rotateZ(0deg)}
         /*50% {transform:rotateZ(180deg)}*/
@@ -67,8 +42,13 @@
 <body>
 <div class="content">
     <img src="./img/logo.png" alt="" class="logo">
-    <img src="./img/gamebefore/word.png" alt="" class="word">
-    <div class="gamebefore flex contentcenter"><img src="./img/gamebefore/joingame.png" alt="" style="width:2.13rem;height:0.24rem"></div>
+    <img src="./img/invitation/again.png" alt="" class="again" style="position: absolute;z-index: 99;top:71.81%;left: 50%;transform: translateX(-50%);width: 4rem;height: .8rem">
+    <img src="./img/invitation/background2.png" alt="" class="back2" style="z-index: 2;width: 100%;height: 100%">
+    <img src="./img/invitation/background3.png" alt="" class="back2" style="z-index: 1;width: 100%;height: 100%">
+    <img src="./img/invitation/qnmb.png" alt="" class="qnmb" style="left: -.5rem;top: 0;width: 2.6rem;height: 2.12rem">
+    <img src="./img/invitation/qnmb.png" alt="" class="qnmb" style="left: 24.11%;top: 13.7%;width: 3rem;height: 2.45rem">
+    <img src="./img/invitation/qnmb.png" alt="" class="qnmb" style="left: 53.65%;top: 0;width: 3.59rem;height: 2.93rem">
+    <img src="./img/invitation/qnmb.png" alt="" class="qnmb" style="left: 82.74%;top: 27.72%;width: 1.7rem;height: 1.39rem">
 </div>
 </body>
 </html>
@@ -79,7 +59,7 @@
     document.addEventListener('DOMContentLoaded', function () {
         function audioAutoPlay() {
             document.addEventListener("WeixinJSBridgeReady", function () {
-                gamebeforemusic()
+                startinvite()
                 // document.querySelector('.musicaudio').play()
                 // document.querySelector('.musicaudio').pause()
             }, false);
@@ -114,7 +94,22 @@
             dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
             success: function () {
 // 用户点击了分享后执行的回调函数
-
+//                 alert('分享成功,可玩次数加一，一天最多可玩6次')
+                $.ajax({
+                    type:'post',
+                    url: USERMESSAGE.share,
+                    contentType: "application/json; charset=utf-8",
+                    data:JSON.stringify({
+                        "mobile": localStorage.tel
+                    }),
+                    success: function (res) {
+                        if(res.code == 0){
+                            //分享成功
+                        }else{
+                            alert(res.msg)
+                        }
+                    },
+                });
             }
         });
         wx.onMenuShareTimeline({//朋友圈
@@ -124,7 +119,22 @@
             success: function () {
                 // 用户点击了分享后执行的回调函数
                 // alert('成功')
-
+                // alert('分享成功,可玩次数加一，一天最多可玩6次')
+                $.ajax({
+                    type:'post',
+                    url: USERMESSAGE.share,
+                    contentType: "application/json; charset=utf-8",
+                    data:JSON.stringify({
+                        "mobile": localStorage.tel
+                    }),
+                    success: function (res) {
+                        if(res.code == 0){
+                            //分享成功
+                        }else{
+                            alert(res.msg)
+                        }
+                    },
+                });
             }
         })
     })
@@ -132,9 +142,8 @@
     //阻止微信浏览器滑动
     window.addEventListener('touchmove', e => e.preventDefault(), { passive: false })
     window.onload = function () {
-
+        $(".again").on('touchstart',function () {
+            location.replace('./game.html');
+        })
     }
-    $('.gamebefore').on('touchstart',function () {
-        location.replace('./game.html')
-    })
 </script>

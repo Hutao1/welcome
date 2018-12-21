@@ -3,6 +3,30 @@ var deviceWidth = document.documentElement.clientWidth;
 if(deviceWidth > 640) deviceWidth = 640;
 document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
 
+function  indexbackmusic() {
+    var musicbg =new Audio();
+    musicbg.src = './audio/index.mp3';
+    musicbg.autoplay=true;
+    musicbg.loop = true;
+}
+function  startinvite() {
+    var musicbg =new Audio();
+    musicbg.src = './audio/starivite.mp3';
+    musicbg.autoplay=true;
+    musicbg.loop = true;
+}
+function  gamebeforemusic() {
+    var musicbg =new Audio();
+    musicbg.src = './audio/gamebefore.mp3';
+    musicbg.autoplay=true;
+    musicbg.loop = true;
+}
+function  gamemusic() {
+    var musicbg =new Audio();
+    musicbg.src = './audio/game.mp3';
+    musicbg.autoplay=true;
+    musicbg.loop = true;
+}
 function  playbackground() {
     var musicbg =new Audio();
     musicbg.src = './audio/background.mp3';

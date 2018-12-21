@@ -18,20 +18,13 @@
         height: 100%;
         left: 0;
         top: 0;
-        background:url("./img/index/background.png") center center no-repeat;
+        background:url("./img/index/background1.png") center center no-repeat;
         background-size: 100% 100%;
     }
     .gameimg{
         position: absolute;
+        z-index: 2;
         top:-1rem;
-    }
-    .zhubiao{
-        width: 7.5rem;
-        height: 6.06rem;
-        position: absolute;
-        left: 50%;
-        top: 20.46%;
-        transform: translateX(-50%);
     }
     .btnlist{
         position: absolute;
@@ -40,6 +33,7 @@
         width: 100%;
         padding: 0 1.7rem;
         box-sizing: border-box;
+        z-index: 2;
     }
     .btnlist img{
         width: 1.57rem;
@@ -49,20 +43,146 @@
         position: absolute;
         left: 50%;
         top: 85.83%;
-        width: 2.04rem;
-        height: .26rem;
+        width: 3.04rem;
+        height: 1.26rem;
         transform: translateX(-50%);
+        z-index: 2;
+    }
+    .inputtelle{
+        width: 6.32rem;
+        height: 3.82rem;
+        background: #fff;
+        border-radius: .1rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        display: none;
+        z-index: 2;
+    }
+    .indexinput{
+        display:block ;
+        height: .6rem;
+        width: 4rem;
+        outline: none;
+        border: 1px solid #f7e102;
+        border-radius: .1rem;
+        box-sizing: border-box;
+        padding: 0 .27rem;
+        font-size: .3rem;
+        margin: 0 auto;
+        margin-top: .7rem;
+    }
+    .indexbtn{
+        padding-top: .65rem;
+    }
+    .btntrue,.btnfalse{
+        width: .95rem;height: .45rem;
+        font-size: .3rem;
+        color: #ffde04;
+    }
+    .rankingshow{
+        width: 6.33rem;
+        height: 11.56rem;
+        border-radius: .1rem;
+        background: #fff;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        display: none;
+        z-index: 2;
+    }
+    .rankinglist{
+        padding:.6rem .65rem 0 .65rem;
+        color: #fee103;
+        font-size: .3rem;
+    }
+    .rankinglist>div{
+        display: flex;
+        justify-content: space-between;
+        padding: .15rem 0;
+    }
+    .rankinglistbtn{
+        font-size: .35rem;
+        color: #fee103;
+        position: absolute;
+        z-index: 2;
+        height: .7rem;
+        width: 1.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: .2rem;
+    }
+    .starrotate{
+        position: absolute;
+        z-index: 2;
+        -webkit-animation:jsssb 20s linear infinite;
+        -moz-animation:jsssb 20s linear infinite;
+        -o-animation:jsssb 20s linear infinite;
+        animation:jsssb 20s linear infinite;
+    }
+    .lqbz{
+        position: absolute;
+        z-index: 0;
+        -webkit-animation:jsssb 20s linear infinite;
+        -moz-animation:jsssb 20s linear infinite;
+        -o-animation:jsssb 20s linear infinite;
+        animation:jsssb 20s linear infinite;
+    }
+    @keyframes jsssb
+    {
+        0%   {transform:rotateZ(0deg)}
+        /*50% {transform:rotateZ(180deg)}*/
+        100% {transform:rotateZ(360deg)}
+    }
+    @keyframes jsssb2
+    {
+        0%   {transform:rotateZ(0deg)}
+        /*50% {transform:rotateZ(180deg)}*/
+        100% {transform:rotateZ(-360deg)}
     }
 </style>
 <body>
 <div class="content">
     <img src="./img/logo.png" alt="" class="logo">
-    <img src="./img/index/zhubiao.png" alt="" class="zhubiao">
+    <!--<img src="./img/index/zhubiao.png" alt="" class="zhubiao">-->
+    <img src="./img/index/background2.png" alt="" style="position: absolute;z-index: 1;left: 0;top: 0;width: 100%;height: 100%">
+    <img src="./img/starrotate.gif" alt="" class="starrotate" style="left: 11.07%;top: 32.61%;width: .32rem;height: .32rem">
+    <img src="./img/starrotate.gif" alt="" class="starrotate" style="left: 27.87%;top: 28.34%;width: .3rem;height: .3rem">
+    <img src="./img/starrotate.gif" alt="" class="starrotate" style="left: 82%;top: 43.4%;width: .28rem;height: .28rem">
+    <img src="./img/index/lqbz.png" alt="" class="lqbz" style="left: -1.23rem;top: 30.28%;width: 2.46rem;height: 2.3rem">
+    <img src="./img/index/lqbz.png" alt="" class="lqbz" style="left: 28.4%;top: 5.62%;width: 1.3rem;height: 1.22rem">
+    <img src="./img/index/lqbz.png" alt="" class="lqbz" style="left: 86%;top: 9.75%;width: 1.7rem;height: 1.59rem">
+    <img src="./img/index/lqbz.png" alt="" class="lqbz" style="left: 69.2%;top: 41.53%;width: 1.5rem;height: 1.4rem">
     <div class="btnlist flex between">
         <div class="detail"><img src="./img/index/detail.png" alt=""></div>
         <div class="ranking"><img src="./img/index/ranking.png" alt=""></div>
     </div>
-    <div class="startbtn"><img src="./img/index/startbtn.png" alt="" style="width: 100%;height: 100%"></div>
+    <div class="startbtn flex contentcenter"><img src="./img/index/startbtn.png" alt="" style="width:2.04rem;height:.26rem"></div>
+    <div class="modal" style="position: fixed;width: 100%;height: 100%;background: rgba(0,0,0,0.5);left: 0;top: 0;display: none;z-index: 2">
+        <div class="inputtelle">
+            <p style="font-size: .3rem;text-align: center;padding-top: .75rem">请输入手机号查询实时账户及排名信息</p>
+            <input type="text" class="indexinput">
+            <div class="indexbtn flex around">
+                <div class="btnfalse flex contentcenter">取消</div>
+                <div class="btntrue flex contentcenter">确定</div>
+            </div>
+        </div>
+        <div class="rankingshow">
+            <p style="font-size: .3rem;text-align: center;padding-top: .41rem;color: #fee103">最高记录</p>
+            <div class="flex maincenter" style="align-items: baseline;padding-top: .53rem;color: #fee103">
+                <span class="yaoshinum" style="font-size: .72rem;color: #fee103;font-weight: bold">0</span>
+                <span style="font-size: .4rem;font-weight: bold;margin:0 .1rem ">x</span>
+                <img src="./img/index/yaoshi.png" alt="" style="width: .4rem;height: .44rem">
+            </div>
+            <div class="rankinglist">
+
+            </div>
+            <div class="rankinglistbtn flex contentcenter">关闭</div>
+        </div>
+    </div>
+
 </div>
 </body>
 </html>
@@ -70,11 +190,22 @@
 <script src="js/interfaceUrl.js"></script>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
 <script>
-    /*$.ajax({
+    $('body').height($('body').height());
+    document.addEventListener('DOMContentLoaded', function () {
+        function audioAutoPlay() {
+            document.addEventListener("WeixinJSBridgeReady", function () {
+                indexbackmusic()
+                // document.querySelector('.musicaudio').play()
+                // document.querySelector('.musicaudio').pause()
+            }, false);
+        }
+        audioAutoPlay();
+    });
+    $.ajax({
         type:'post',
         url: USERMESSAGE.insertTicket,
         contentType: "application/json; charset=utf-8",
-        data:JSON.stringify({data:location.href.split('#')[0]}),
+        data:JSON.stringify({url:location.href.split('#')[0]}),
         success: function (res) {
             if(res.code == 0){
                 wx.config({
@@ -90,38 +221,78 @@
     });
     wx.ready(function () {   //需在用户可能点击分享按钮前就先调用
         wx.onMenuShareAppMessage({
-            title: '宁波文化广场-领航行动', // 分享标题
-            desc: '快来一起探索吧', // 分享描述
-            link: 'http://www.hulonghua.club/welcome/share.html', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+            title: '来自星星的礼', // 分享标题
+            desc: '6666份来自星星的礼，2019年前，预备追光！', // 分享描述
+            link: 'http://www.hulonghua.club/welcome/index.html', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
             imgUrl: 'http://www.hulonghua.club/welcome/img/shareicon.png', // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
             dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
             success: function () {
 // 用户点击了分享后执行的回调函数
-                alert('分享成功')
-            },cancel:function () {
-                alert('取消分享')
+
             }
         });
         wx.onMenuShareTimeline({//朋友圈
-            title: '宁波文化广场-领航行动', // 分享标题
-            link: 'http://www.hulonghua.club/welcome/share.html', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+            title: '来自星星的礼', // 分享标题
+            link: 'http://www.hulonghua.club/welcome/index.html', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
             imgUrl: 'http://www.hulonghua.club/welcome/img/shareicon.png', // 分享图标
             success: function () {
                 // 用户点击了分享后执行的回调函数
                 // alert('成功')
-                alert('分享成功')
-            },cancel:function () {
-                alert('取消分享')
+
             }
         })
-    })*/
+    })
 
     //阻止微信浏览器滑动
     window.addEventListener('touchmove', e => e.preventDefault(), { passive: false })
     window.onload = function () {
-        $('.startbtn').on('touchstart',function () {
-            location.replace('./starintroduce.html');
-        })
+
     }
+    $('.startbtn').on('touchstart',function () {
+        location.replace('./starintroduce.html');
+    })
+    $(".ranking").on('touchstart',function (){
+        $(".modal").show();
+        $(".inputtelle").show();
+    })
+    $(".btnfalse").on('touchstart',function () {
+        $(".modal").hide();
+        $(".inputtelle").hide();
+    })
+    $(".btntrue").on('touchstart',function () {
+        if(/^((13[0-9])|(14[5,7,9])|(15([0-3]|[5-9]))|(166)|(17[0,1,3,5,6,7,8])|(18[0-9])|(19[8|9]))\d{8}$/.test($(".indexinput").val())){
+            $.ajax({
+                type:'post',
+                url: USERMESSAGE.query,
+                contentType: "application/json; charset=utf-8",
+                data:JSON.stringify({
+                    "mobile": $(".indexinput").val()
+                }),
+                success: function (res) {
+                    if(res.code == 0){
+                        var str = ''
+                        res.data.list.forEach(function(item,index){
+                            str+='<div><span>'+item.mobile+'</span><span>第'+(index+1)+'名</span></div>'
+                        })
+                        $(".rankinglist").html(str)
+                        $(".yaoshinum").text(res.data.myPowers)
+                        $(".inputtelle").hide();
+                        $(".rankingshow").show()
+                    }else{
+                        alert(res.msg)
+                    }
+                },
+            });
+
+        }else{
+            alert("手机号输入不正确")
+        }
+
+    })
+    //rankinglistbtn
+    $(".rankinglistbtn").on('touchstart',function () {
+        $(".modal").hide();
+        $(".rankingshow").hide()
+    })
 </script>
