@@ -123,6 +123,10 @@
         <img src="./img/gameover/yuechi.png" alt="" style="width: .4rem;height: .4rem;margin-right: .2rem">
         <span style="font-size: .3rem;color: #fff">双钥匙双层记</span>
     </div>
+    <div class="modal2" style="position: fixed;width: 100%;height: 100%;background: rgba(0,0,0,0.5);left: 0;top: 0;display: none;z-index: 88">
+        <div style="width: 6rem;background: #fff;left: 50%;top: 50%;transform: translate(-50%,-50%);position: absolute;border-radius: .2rem">
+            <p style="font-size: .3rem;text-align: center;padding: .2rem 0">短信验证码已发送，请耐心等待并查收</p>
+        </div>
     <audio src="./audio/yaoshi.mp3" preload="auto" class="musicyaoshi" style="display: none"></audio>
 </div>
 </body>
@@ -225,6 +229,9 @@
             document.querySelector('.musicyaoshi').currentTime = 0;
             document.querySelector('.musicyaoshi').play()
             if(/^((13[0-9])|(14[5,7,9])|(15([0-3]|[5-9]))|(166)|(17[0,1,3,5,6,7,8])|(18[0-9])|(19[8|9]))\d{8}$/.test($(".nowtel").val())){
+                $(".modal2").show()
+
+                $(".modal2").fadeOut(4000)
                 telmessageflag = false;
                 setTimeout(()=>{
                     telmessageflag =true;

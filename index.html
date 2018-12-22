@@ -94,7 +94,7 @@
         z-index: 2;
     }
     .rankinglist{
-        padding:.6rem .65rem 0 .65rem;
+        padding:.4rem .65rem 0 .65rem;
         color: #fee103;
         font-size: .3rem;
     }
@@ -170,11 +170,14 @@
             </div>
         </div>
         <div class="rankingshow">
-            <p style="font-size: .3rem;text-align: center;padding-top: .41rem;color: #fee103">最高记录</p>
-            <div class="flex maincenter" style="align-items: baseline;padding-top: .53rem;color: #fee103">
+            <p style="font-size: .3rem;text-align: center;padding-top: .41rem;color: #fee103;font-weight: bold">最高记录</p>
+            <div class="flex maincenter" style="align-items: baseline;padding-top: .23rem;color: #fee103">
                 <span class="yaoshinum" style="font-size: .72rem;color: #fee103;font-weight: bold">0</span>
                 <span style="font-size: .4rem;font-weight: bold;margin:0 .1rem ">x</span>
                 <img src="./img/index/yaoshi.png" alt="" style="width: .4rem;height: .44rem">
+            </div>
+            <div class="flex contentcenter" style="font-size: .4rem;font-weight: bold;color: #fee103;margin-top: .1rem">
+                第 <span class="usrranking">0</span>名
             </div>
             <div class="rankinglist">
 
@@ -280,6 +283,7 @@
                         })
                         $(".rankinglist").html(str)
                         $(".yaoshinum").text(res.data.myPowers)
+                        $(".usrranking").text(res.data.mySort)
                         $(".inputtelle").hide();
                         $(".rankingshow").show()
                     }else{
