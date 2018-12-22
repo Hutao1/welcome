@@ -45,7 +45,7 @@ class Gameinit {
         createnergy.css({'width':'1rem','height':'1rem'});
         createnergy.css({'left':getRandom(60,document.body.clientWidth-createnergy[0].width-60),'top':-createnergy[0].height});
         createnergy.css('transform','rotate('+getRandom(-360,360)+'deg)')
-        createnergy.css({'transition':'all 2s linear'});
+        createnergy.css({'transition':'all 1.5s linear'});
         /*createnergy.animate({top:document.body.clientHeight+100+'px'},2000,'linear',function () {
             $(this).remove()
         })*/
