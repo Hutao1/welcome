@@ -156,6 +156,9 @@
     //阻止微信浏览器滑动
     window.addEventListener('touchmove', e => e.preventDefault(), { passive: false })
     window.onload = function () {
+        $('.starintroducebtn').on('touchstart',function () {
+            location.replace('./gamebefore.html')
+        })
         $(".word1").fadeIn(1000)
         setTimeout(()=>{
             $(".word2").fadeIn(1000)
@@ -164,7 +167,5 @@
             $(".word3").fadeIn(1000)
         },2000)
     }
-    $('.starintroducebtn').on('touchstart',function () {
-        location.replace('./gamebefore.html')
-    })
+
 </script>

@@ -123,6 +123,7 @@
         <img src="./img/gameover/yuechi.png" alt="" style="width: .4rem;height: .4rem;margin-right: .2rem">
         <span style="font-size: .3rem;color: #fff">双钥匙双层记</span>
     </div>
+    <audio src="./audio/yaoshi.mp3" preload="auto" class="musicyaoshi" style="display: none"></audio>
 </div>
 </body>
 </html>
@@ -136,6 +137,8 @@
                 gamemusic()
                 // document.querySelector('.musicaudio').play()
                 // document.querySelector('.musicaudio').pause()
+                document.querySelector('.musicyaoshi').play()
+                document.querySelector('.musicyaoshi').pause()
             }, false);
         }
         audioAutoPlay();
@@ -200,6 +203,13 @@
             $(".writetel").hide();
         }else{
             $(".enter").removeClass('active');
+            setInterval(()=>{
+                if(($(".validate").val() != '') && ($(".nowtel").val()!='')){
+                    $(".enter").addClass('active');
+                }else{
+                    $(".enter").removeClass('active');
+                }
+            },1000)
         }
         var wordarr = ['荟','晖','慧','卉','蕙'];
         $(".finalnum").text(sessionStorage.score)
@@ -212,6 +222,8 @@
     }
     $(".getmessage").on('touchstart',function () {
         if(telmessageflag){
+            document.querySelector('.musicyaoshi').currentTime = 0;
+            document.querySelector('.musicyaoshi').play()
             if(/^((13[0-9])|(14[5,7,9])|(15([0-3]|[5-9]))|(166)|(17[0,1,3,5,6,7,8])|(18[0-9])|(19[8|9]))\d{8}$/.test($(".nowtel").val())){
                 telmessageflag = false;
                 setTimeout(()=>{
@@ -237,13 +249,14 @@
         }
 
     })
-    $(".validate").on('keyup',function () {
+    /*$(".validate").on('keyup',function () {
         if(($(this).val() != '') && ($(".nowtel").val()!='')){
             $(".enter").addClass('active');
         }else{
             $(".enter").removeClass('active');
         }
-    })
+    })*/
+
     $(".enter").on("touchstart",function () {
         if(telcontentflag){//手机输入框显示，需要验证内容
             if($(".enter").hasClass('active')){
@@ -271,6 +284,7 @@
                                     }else{
                                         alert(res.msg)
                                         if(res.code = '00060'){
+                                            localStorage.tel = $(".nowtel").val();
                                             location.replace('./invitation.html')
                                         }
                                     }

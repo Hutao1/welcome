@@ -139,8 +139,9 @@
         setTimeout(()=>{
             $(".word3").fadeIn(1000)
         },2000)
+        $('.gamebefore').on('touchstart',function () {
+            location.replace('./game.html')
+        })
     }
-    $('.gamebefore').on('touchstart',function () {
-        location.replace('./game.html')
-    })
+
 </script>
